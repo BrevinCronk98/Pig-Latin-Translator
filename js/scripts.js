@@ -16,17 +16,33 @@ $(document).ready(function() {
             var firstLetter = array[i].charAt(0);
             if (vowels.includes(firstLetter)){
                 letterArr.push(`${array[i]}way`);
+              
+                 console.log(`${array[i]}way`)
             }
+
+            
             if (consonants.includes(firstLetter)){
                 for (j=0; j< array[i].length; j++){
                     var letter = array[i].charAt(j);
-                    console.log(letter)
+                     console.log(j)
+                    // console.log(letter)
                     if (consonants.includes(letter)){
-                        array[i].slice(j);
-                        // console.log(array[i].slice(j))
-                        // letterArr.push(`${array[j]}ay`)
-                        // letterArr.push(`${array[i]}way`);
+                        var str1 = array[i].slice(j, 1);
+                        console.log(str1)
+                    } else {
+                        var str2 = array[i].slice(j)
+                        console.log(str2)
                     }
+
+                        //console.log(str1);
+                        // var str2 = array[i].slice(1, (array[i].length-2))
+                        // array[i].concat(str1);
+                         console.log (array[i]);
+
+                        // console.log(array[i].slice(j))
+                         letterArr.push(`${array[j]}ay`)
+                        // letterArr.push(`${array[i]}way`);
+                    
                 }
 
                     // if (letters === vowels[j]){
